@@ -525,6 +525,14 @@ function Navbar() {
                 Thành viên
               </Link>
             </li>
+            <li>
+              <Link
+                to="/quiz"
+                className="text-white/80 hover:text-white px-3 py-2 rounded-xl hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-[var(--accent)] bg-[var(--accent)]/20 border border-[var(--accent)]/30"
+              >
+                Quiz
+              </Link>
+            </li>
           </ul>
         </div>
       </nav>
