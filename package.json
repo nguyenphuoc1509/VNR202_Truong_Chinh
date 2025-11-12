@@ -14,9 +14,11 @@
     "antd": "^5.28.0",
     "dayjs": "^1.11.19",
     "framer-motion": "^12.23.24",
+    "leaflet": "^1.9.4",
     "lucide-react": "^0.553.0",
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
+    "react-leaflet": "^5.0.0",
     "react-router-dom": "^7.9.5"
   },
   "devDependencies": {

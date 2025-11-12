@@ -1,5 +1,6 @@
 import React, { useEffect, useMemo, useRef, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { Link } from "react-router-dom";
 import {
   Play,
   Pause,
@@ -13,6 +14,12 @@ import {
   ChevronRight,
   ChevronLeft,
   ExternalLink,
+  Quote,
+  Users,
+  BarChart3,
+  BookOpen,
+  Search,
+  X,
 } from "lucide-react";
 import narrationMp3 from "./assets/truong_chinh_ten_that_dang_xuan_khu_19071988_5d5601d2-863f-41e1-bbd0-dbe3911644c1.mp3";
 
@@ -483,15 +490,15 @@ function Navbar() {
     <header className="fixed top-0 inset-x-0 z-40 backdrop-blur border-b border-white/10 bg-[rgba(10,10,10,0.4)]">
       <nav className="max-w-6xl mx-auto px-4 md:px-6">
         <div className="flex items-center justify-between h-16">
-          <a
-            href="#home"
+          <Link
+            to="/"
             className="flex items-center gap-2 focus:outline-none focus:ring-2 focus:ring-[var(--accent)] rounded-xl"
           >
             <span className="w-8 h-8 rounded-xl bg-gradient-to-br from-[var(--accent-2)] to-[var(--accent-3)] shadow-lg" />
             <span className="text-white font-bold tracking-wide">
               Trường Chinh
             </span>
-          </a>
+          </Link>
           <button
             className="md:hidden p-2 rounded-xl bg-white/5 hover:bg-white/10"
             onClick={() => setOpen(!open)}
@@ -510,6 +517,14 @@ function Navbar() {
                 </a>
               </li>
             ))}
+            <li>
+              <Link
+                to="/team"
+                className="text-white/80 hover:text-white px-3 py-2 rounded-xl hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-[var(--accent)]"
+              >
+                Thành viên
+              </Link>
+            </li>
           </ul>
         </div>
       </nav>
@@ -598,10 +613,10 @@ function Hero({ onTogglePlay, playing }) {
                 Khám phá mốc sự kiện
               </a>
             </div>
-            <div className="mt-6 flex items-center gap-3 text-xs text-white/70">
+            {/* <div className="mt-6 flex items-center gap-3 text-xs text-white/70">
               <Info size={16} /> Nguồn: Wikipedia ({DATA.metadata.article}) –{" "}
               {DATA.metadata.license}
-            </div>
+            </div> */}
           </motion.div>
           <motion.div
             className="relative"
@@ -1187,9 +1202,9 @@ function Footer() {
           Tìm hiểu thêm
         </a>
       </div>
-      <div className="mt-2 text-xs">
+      {/* <div className="mt-2 text-xs">
         Nguồn dữ liệu: Wikipedia – CC BY-SA 4.0
-      </div>
+      </div> */}
     </footer>
   );
 }
