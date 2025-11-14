@@ -304,9 +304,9 @@ function useTTS() {
         <speak version="1.0" xml:lang="vi-VN">
           <voice name="vi-VN-HoaiMyNeural">
             <prosody rate="1.02" pitch="0%">${text.replace(
-              /&/g,
-              "&amp;"
-            )}</prosody>
+        /&/g,
+        "&amp;"
+      )}</prosody>
           </voice>
         </speak>`;
       const resp = await fetch(
@@ -478,7 +478,7 @@ function ParticleBG() {
 // ==========================
 function Navbar() {
   const items = [
-    { id: "home", label: "Home" },
+    { id: "home", label: "Trang chủ" },
     { id: "bio", label: "Cuộc đời" },
     { id: "contributions", label: "Cống hiến" },
     { id: "gallery", label: "Hình ảnh" },
@@ -528,9 +528,9 @@ function Navbar() {
             <li>
               <Link
                 to="/quiz"
-                className="text-white/80 hover:text-white px-3 py-2 rounded-xl hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-[var(--accent)] bg-[var(--accent)]/20 border border-[var(--accent)]/30"
+                className="text-white/80 hover:text-white px-3 py-2 rounded-xl hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-[var(--accent)]"
               >
-                Quiz
+                Trắc nghiệm
               </Link>
             </li>
           </ul>
@@ -1093,8 +1093,8 @@ function AudioTTS({ segments, onBoundarySection, tts, fullText }) {
           {speaking && !paused
             ? "Tạm dừng"
             : paused
-            ? "Tiếp tục"
-            : "Bắt đầu đọc"}
+              ? "Tiếp tục"
+              : "Bắt đầu đọc"}
         </button>
         <button
           onClick={() => {
